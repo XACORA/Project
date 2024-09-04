@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Safety Analytics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        nav {
+            margin: 1em 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 2em;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .chart {
+            margin: 2em 0;
+        }
+        .safety-rules {
+            margin: 2em 0;
+            padding: 1em;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+        .safety-rules ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Women's Safety Analytics</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#data">Data</a>
+        <a href="#safety">Safety Rules</a>
+        <a href="#GeoLocation">Geolocation</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>Welcome to Women's Safety Analytics. Our goal is to provide valuable insights into women's safety through data analysis and visualization.</p>
+        <img src="img4.jpg" alt="About Us">
+    </section>
+
+    <section id="data">
+        <h2>Data and Analytics</h2>
+        <div class="chart">
+            <h3>Safety Statistics</h3>
+            <p>Charts and graphs will be displayed here.</p>
+            <p> According to the 2023 Women, Peace, and Security Index, India ranks 128th out of 177 countries in terms of women's safety. The index measures women's inclusion, justice, and security, and India's score is 0.595 out of 1.
+            </p>
+            <!-- Add an image for charts if needed -->
+            <img src="img1.jpg" alt="Safety Statistics">
+        </div>
+        <div class="chart">
+            <h3>Interactive Map</h3>
+            <p>An interactive map showing safety data will be embedded here.</p>
+            <!-- Add an image for the map if needed -->
+            <img src="map.gif" alt="Interactive Map">
+        </div>
+    </section>
+
+    <section id="safety">
+        <h2>Safety Rules</h2>
+        <div class="safety-rules">
+            <h3>Important Safety Rules</h3>
+            <ul>
+                <li>Always be aware of your surroundings.</li>
+                <li>Trust your instincts; if something feels off, remove yourself from the situation.</li>
+                <li>Use well-lit and populated routes when walking alone.</li>
+                <li>Keep your phone charged and have emergency contacts readily accessible.</li>
+                <li>Be cautious when sharing personal information online.</li>
+            </ul>
+            <!-- Add an image related to safety rules if needed -->
+            <img src="img3.jpg" alt="Safety Rules">
+        </div>
+    
+    </section>        
+        
+    <section id="GeoLocation">
+    <h2><p style="color:red;">GEOLOCATION</p></h2>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) 
+  {
+    navigator.geolocation.watchPosition(showPosition);
+  } else 
+  { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+    
+function showPosition(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+</section>
+
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you have any questions or would like to contribute data, please contact us <a href="mailto:support@womenssafetyanalytics.com">support@womenssafetyanalytics.com</a>.</p>
+        <p>SDVSDV</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Women's Safety Analytics. All rights reserved.</p>
+    </footer>
+</body>
+</html>
